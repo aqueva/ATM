@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var balance=0.000;
+        function bal(){
+var bala=parseInt(alert("balance is:"+balance));
+atm();
+        }
+function depos(){
+    var deposit=parseInt(prompt("Enter amount you want to deposit"));
+    if(isNaN(deposit) || deposit==''){
+        depos()
+    }else{
+        balance=balance+deposit;
+    }
+    atm();
+}
+function exit(){
+    var withdraw=prompt("Do you want to exit,select Yes or No");
+    if(withdraw=="yes" || "Yes"){
+        window.location.href='ind.html';
+    }else if(withdraw=="no" || "No"){
+atm();
+}else{
+    alert("what is your choice");
+    atm();
+}
+}
+function minuss(){
+    var withdraw=parseInt(prompt("Enter amount you want to withdraw"));
+    if(isNaN(withdraw) || withdraw==''){
+        minuss()
+    }else{
+        balance=balance-withdraw;
+    }
+    atm();
+}
+    function erro(){
+        var er=parseInt(prompt("No choice you made"));
+        atm();
+    }
+        function atm(){
+            var choice= parseInt(prompt("choice 1)Check balance,2)Deposit,3)Withdraw,4)Exit"));
+if(choice==1){
+bal();
+}else if(choice==2){
+depos();
+}else if(choice==3)
+{
+ minuss();
+}else if(choice==4){
+    exit();
+}else{
+error();
+}
+}
+  atm();  
+
+
+
+    </script>
+    </center>
+</body>
+</html>
